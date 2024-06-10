@@ -1,9 +1,9 @@
 import './App.css';
-
+import { AllRoutes } from './routes/AllRoutes';
 function App() {
   return (
     <div className="App">
-      <h1 className=" bg-red-800 text-8xl">Hello world</h1>
+      <AllRoutes />
     </div>
   );
 }
