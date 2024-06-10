@@ -16,7 +16,10 @@ export const Header = () => {
             </span>
           </Link>
           <div className="flex items-center space-x-6 rtl:space-x-reverse">
-            <span></span>
+            <span className=" cursor-pointer text-xl text-gray-700 dark:text-white mr-5 bi bi-gear-wide-connected"></span>
+            <span className="cursor-pointer text-xl text-gray-700 dark:text-white mr-5 bi bi-search"></span>
+            <span className="cursor-pointer text-xl text-gray-700 dark:text-white mr-5 bi bi-cart-fill"></span>
+            <span className="cursor-pointer text-xl text-gray-700 dark:text-white mr-5 bi bi-person-circle"></span>
           </div>
         </div>
       </nav>
