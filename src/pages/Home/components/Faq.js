@@ -38,8 +38,8 @@ const Faq = () => {
         data-active-classes="bg-white dark:bg-gray-900 text-gray-900 dark:text-white"
         data-inactive-classes="text-gray-500 dark:text-gray-400"
       >
-        {faqs.map((faq) => (
-          <div>
+        {faqs.map(({ id, question, answer }) => (
+          <div key={id}>
             <h2 id="accordion-flush-heading-1">
               <button
                 type="button"
@@ -49,7 +49,7 @@ const Faq = () => {
                 aria-controls="accordion-flush-body-1"
               >
                 <span className="text-xl text-slate-900 dark:text-white">
-                  question
+                  {question}
                 </span>
                 <svg
                   data-accordion-icon
@@ -74,7 +74,7 @@ const Faq = () => {
             >
               <div className="py-5 border-b border-gray-200 dark:border-gray-700">
                 <p className="text-lg mb-2 text-gray-500 dark:text-gray-400">
-                  answer
+                  {answer}
                 </p>
               </div>
             </div>
