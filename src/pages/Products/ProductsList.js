@@ -1,6 +1,8 @@
+import { useState } from 'react';
 import { ProductCard } from '../../components/Elements/ProductCard';
 import { FilterBar } from './components/FilterBar';
 export const ProductsList = () => {
+  const [show, setShow] = useState(false);
   return (
     <main>
       <section className="my-5">
