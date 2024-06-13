@@ -1,4 +1,5 @@
 import { ProductCard } from '../../components/Elements/ProductCard';
+import { FilterBar } from './components/FilterBar';
 export const ProductsList = () => {
   return (
     <main>
@@ -31,6 +32,7 @@ export const ProductsList = () => {
           <ProductCard />
         </div>
       </section>
+      <FilterBar />
     </main>
   );
 };
