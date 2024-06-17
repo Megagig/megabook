@@ -1,13 +1,16 @@
 import { Link } from 'react-router-dom';
 export const ProductCard = ({ product }) => {
-  const { id, name, overview, image_local, price, rating } = product;
+  const { id, name, overview, image_local, price, best_seller, rating } =
+    product;
 
   return (
     <div className="m-3 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
       <Link to={`products/${id}`} className="relative">
-        <span className="absolute top-4 left-2 px-2 bg-orange-500 bg-opacity-90 text-white rounded">
-          Best Seller
-        </span>
+        {best_seller && (
+          <span className="absolute top-4 left-2 px-2 bg-orange-500 bg-opacity-90 text-white rounded">
+            Best Seller
+          </span>
+        )}
         <img
           className="rounded-t-lg w-full h-64"
           src={image_local}
