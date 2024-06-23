@@ -1,10 +1,8 @@
-
 import { Link } from 'react-router-dom';
 import Logo from '../../assets/logo.png';
-import { useEffect, useState } from 'react';
+import { Search } from '../Sections/Search';
 
 export const Header = () => {
-
   return (
     <header>
       <nav className="bg-white dark:bg-gray-900">
@@ -16,10 +14,7 @@ export const Header = () => {
             </span>
           </Link>
           <div className="flex items-center relative">
-            <span
-
-              className="cursor-pointer text-xl text-gray-700 dark:text-white mr-5 bi bi-gear-wide-connected"
-            ></span>
+            <span className="cursor-pointer text-xl text-gray-700 dark:text-white mr-5 bi bi-gear-wide-connected"></span>
             <span className="cursor-pointer text-xl text-gray-700 dark:text-white mr-5 bi bi-search"></span>
             <Link to="/cart" className="text-gray-700 dark:text-white mr-5">
               <span className="text-2xl bi bi-cart-fill relative">
@@ -32,6 +27,7 @@ export const Header = () => {
           </div>
         </div>
       </nav>
+      <Search />
     </header>
   );
 };
