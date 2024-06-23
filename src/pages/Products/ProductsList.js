@@ -12,7 +12,7 @@ export const ProductsList = () => {
       setProducts(data);
     };
     fetchProducts();
-  }, []);
+  });
   return (
     <main>
       <section className="my-5">
