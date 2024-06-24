@@ -3,7 +3,7 @@ export const filterReducer = (state, action) => {
 
   switch (type) {
     case 'PRODUCT_LIST':
-      return;
+      return { productList: payload.products };
     case 'SORT_BY':
       return;
     case 'RATINGS':
@@ -15,6 +15,6 @@ export const filterReducer = (state, action) => {
     case 'CLEAR_FILTER':
       return;
     default:
-      throw new error('No case found');
+      throw new Error('No case found');
   }
 };

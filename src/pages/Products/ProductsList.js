@@ -4,16 +4,17 @@ import { FilterBar } from './components/FilterBar';
 import { Usetitle } from '../../hook/Usetitle';
 import { useFilter } from '../../context/FilterContext';
 export const ProductsList = () => {
-  const { productList } = useFilter();
+  const { products, initialProductList } = useFilter();
   const [show, setShow] = useState(false);
-  const [products, setProducts] = useState([]);
+  // const [products, setProducts] = useState([]);
   Usetitle('Explore Ebook collections');
 
   useEffect(() => {
     const fetchProducts = async () => {
       const response = await fetch('http://localhost:8000/products');
       const data = await response.json();
-      setProducts(data);
+      // setProducts(data);
+      initialProductList(data);
     };
     fetchProducts();
   }, []);
