@@ -1,9 +1,11 @@
 import { useEffect, useState } from 'react';
 import { ProductCard } from '../../components';
 import { FilterBar } from './components/FilterBar';
+import { Usetitle } from '../../hook/Usetitle';
 export const ProductsList = () => {
   const [show, setShow] = useState(false);
   const [products, setProducts] = useState([]);
+  Usetitle('Explore Ebook collections');
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -12,7 +14,7 @@ export const ProductsList = () => {
       setProducts(data);
     };
     fetchProducts();
-  });
+  }, []);
   return (
     <main>
       <section className="my-5">
