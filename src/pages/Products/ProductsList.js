@@ -2,7 +2,9 @@ import { useEffect, useState } from 'react';
 import { ProductCard } from '../../components';
 import { FilterBar } from './components/FilterBar';
 import { Usetitle } from '../../hook/Usetitle';
+import { useFilter } from '../../context/FilterContext';
 export const ProductsList = () => {
+  const { productList } = useFilter();
   const [show, setShow] = useState(false);
   const [products, setProducts] = useState([]);
   Usetitle('Explore Ebook collections');
