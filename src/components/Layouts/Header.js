@@ -32,7 +32,7 @@ export const Header = () => {
           </div>
         </div>
       </nav>
-      {search && <Search />}
+      {search && <Search setSearch={setSearch} />}
     </header>
   );
 };
